@@ -9,7 +9,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <title>독서 수업 도우미</title>
+    <title>고등 연수 도우미</title>
     <style>
         body {
             padding-left: 40px;
@@ -59,6 +59,29 @@
             color: black;
             border: 2px solid #4CAF50;
         }
+
+        .combtn>button {
+            background-color: rgb(0, 136, 255);
+            /* Green */
+            border: none;
+            color: white;
+
+            height: 55px;
+            width: 160px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px 4px 10px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        .combtn>button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid rgb(0, 136, 255);
+        }
     </style>
 </head>
 
@@ -84,6 +107,13 @@
             <button onclick="copyToClipboard('gocloudtype')">클라우드타입</button>
             <hr>
             <button onclick="copyToClipboard('reqtxt')">requirements.txt</button>
+            <hr>
+        </div>
+        <div class="combtn">
+            <button onclick="copyToClipboard('vscodeexe')">vscode설치</button>
+            <p>vscode 설치 후 ctrl+shift+X > Live server와 Python 설치</p>
+            <button onclick="copyToClipboard('pythonexe')">파이썬설치</button>
+            <p>파이썬 설치 시 Add Python 3.8 to PATH에 체크</p>
         </div>
         <hr>
         <!--버튼 html tag 기초 내용 -->
@@ -126,34 +156,42 @@
 
         <!-- 버튼 meta property 내용 -->
         <textarea id="pip" style="display: none;">
-                    pip install Flask Flask-Cors google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+pip install Flask Flask-Cors google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
                 </textarea>
 
         <textarea id="ggdelvop" style="display: none;">
-                    console.cloud.google.com
+console.cloud.google.com
                 </textarea>
 
         <textarea id="kkdelvop" style="display: none;">
-                    developers.kakao.com
+developers.kakao.com
                 </textarea>
 
         <!-- 버튼 부트스트랩 기초 -->
         <textarea id="copyspread" style="display: none;">
-                    docs.google.com/spreadsheets/d/1blu7tEivn3riDfsz13ZgIQ9OLF_dAtfAAwISJC4bXOo/copy?usp=sharing
+docs.google.com/spreadsheets/d/1blu7tEivn3riDfsz13ZgIQ9OLF_dAtfAAwISJC4bXOo/copy?usp=sharing
                 </textarea>
 
         <!-- 버튼 부트스트랩 컴포넌트 -->
         <textarea id="gogithub" style="display: none;">
-                    github.com
+github.com
                 </textarea>
 
         <textarea id="gocloudtype" style="display: none;">
-                    cloudtype.io
+cloudtype.io
                 </textarea>
 
         <!-- 버튼 버튼스타일 내용 -->
         <textarea id="reqtxt" style="display: none;">
-                    pip freeze > requirements.txt
+pip freeze > requirements.txt
+                </textarea>
+
+        <textarea id="vscodeexe" style="display: none;">
+update.code.visualstudio.com/1.73.1/win32-x64-user/stable
+                </textarea>
+
+        <textarea id="pythonexe" style="display: none;">
+www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe
                 </textarea>
     </div>
     </div>
