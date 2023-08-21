@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>독서 수업 도우미</title>
+    <style>
+        body {
+            padding-left: 40px;
+        }
+
+        #alert {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: rgba(60, 60, 60, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .main {
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .main>li {
+            font-size: 18px;
+        }
+
+        .helpbtn>button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+
+            height: 55px;
+            width: 190px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px 4px 10px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        .helpbtn>button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="alert" style="display: none;"></div>
+    <div class="main">
+        <h2>업무자동화-도서신청사이트 만들기</h2>
+        <li>코드 정렬 : shift+tab 왼쪽 / tab 오른쪽으로 이동</li>
+        <li>코드 자동 정렬 : 정렬하고 싶은 부분을 드래그 Shift + Alt + f</li>
+        <li>전체선택 단축키 : ctrl+a</li>
+        <li>저장하기 단축키 : ctrl+s</li>
+    </div>
+    <div>
+        <div class="helpbtn">
+            <button onclick="copyToClipboard('html')">HTML's Tag 기초</button>
+            <button onclick="copyToClipboard('pip')">설치 명령어</button>
+            <hr>
+            <button onclick="copyToClipboard('ggdelvop')">구글 개발자</button>
+            <button onclick="copyToClipboard('kkdelvop')">카카오 개발자</button>
+            <hr>
+            <button onclick="copyToClipboard('copyspread')">구글시트</button>
+            <button onclick="copyToClipboard('gogithub')">깃허브</button>
+            <button onclick="copyToClipboard('gocloudtype')">클라우드타입</button>
+            <hr>
+            <button onclick="copyToClipboard('reqtxt')">requirements.txt</button>
+        </div>
+        <hr>
+        <!--버튼 html tag 기초 내용 -->
+        <textarea id="html" style="display: none;">
+                    <!DOCTYPE html>
+                    <html lang="en">                        
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>HTML 기초</title>
+                        <style>
+                            /* 이곳은 스타일을 꾸미는 공간입니다 */
+                        </style>
+                    </head>
+                    
+                    <body>
+                        <!-- 구역을 나누는 태그들 -->
+                        <div> div는 구역을 나눕니다. 웹페이지 레이아웃을 만들 때 유용해요! </div>
+                        <p> p는 문단이에요. 글을 작성할 때 텍스트 단락을 구분하죠. </p>
+                        <ul>
+                            <li> 1. 목록을 만들 때 사용해요 </li>
+                            <li> 2. 목록을 만들 때 사용해요 </li>
+                        </ul>
+                    
+                        <!-- 구역 내 콘텐츠 태그들 -->
+                        <h1>h1은 제목을 나타내는 태그입니다. h1은 가장 중요한 제목을 나타내요.</h1>
+                        <h2>h2는 소제목입니다.</h2>
+                        <h3>h3~h6로 갈수록 그 중요도가 점점 낮아집니다.</h3>
+                        <hr>
+                        span 태그입니다: 특정 <span style="color:red">글자</span>를 꾸밀 때 써요
+                        <hr>
+                        a 태그입니다: <a href="http://naver.com/"> 하이퍼링크를 만들 때 사용해요 </a>
+                        <hr>
+                        input 태그입니다: <input type="text" />
+                        <hr>
+                        button 태그입니다: <button> 버튼입니다</button>
+                    </body>            
+                    </html>
+                </textarea>
+
+        <!-- 버튼 meta property 내용 -->
+        <textarea id="pip" style="display: none;">
+                    pip install Flask Flask-Cors google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+                </textarea>
+
+        <textarea id="ggdelvop" style="display: none;">
+                    console.cloud.google.com
+                </textarea>
+
+        <textarea id="kkdelvop" style="display: none;">
+                    developers.kakao.com
+                </textarea>
+
+        <!-- 버튼 부트스트랩 기초 -->
+        <textarea id="copyspread" style="display: none;">
+                    docs.google.com/spreadsheets/d/1blu7tEivn3riDfsz13ZgIQ9OLF_dAtfAAwISJC4bXOo/copy?usp=sharing
+                </textarea>
+
+        <!-- 버튼 부트스트랩 컴포넌트 -->
+        <textarea id="gogithub" style="display: none;">
+                    github.com
+                </textarea>
+
+        <textarea id="gocloudtype" style="display: none;">
+                    cloudtype.io
+                </textarea>
+
+        <!-- 버튼 버튼스타일 내용 -->
+        <textarea id="reqtxt" style="display: none;">
+                    pip freeze > requirements.txt
+                </textarea>
+    </div>
+    </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        function copyToClipboard(id) {
+            const el = document.getElementById(id);
+            el.style.display = 'block';
+            const textToCopy = el.value;
+            el.style.display = 'none';
+
+            // Use the Clipboard API to copy the text
+            navigator.clipboard.writeText(textToCopy).then(function () {
+                // display the alert message
+                const alertDiv = document.getElementById('alert');
+                alertDiv.style.display = 'block';
+                alertDiv.innerHTML = '복사완료<br>ctrl+v로 붙여넣으세요!';
+
+                // hide the alert message after 2 seconds
+                setTimeout(function () {
+                    alertDiv.style.display = 'none';
+                }, 1000);
+            }).catch(function () {
+                console.error('Unable to copy text');
+            });
+        }
+    </script>
+</body>
+
+</html>
