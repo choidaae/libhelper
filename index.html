@@ -114,9 +114,9 @@
             <hr>
         </div>
         <div class="combtn">
-            <button onclick="window.open('http://update.code.visualstudio.com/1.73.1/win32-x64-user/stable')">vscode다운</button>
+            <button onclick="copyToClipboard('vscodeexe')">vscode다운</button>
             <p>vscode 설치 후 ctrl+shift+X > Live server와 Python 설치</p>
-            <button onclick="window.open('http://www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe')">파이썬다운</button>
+            <button onclick="copyToClipboard('pythonexe')">파이썬다운</button>
             <p>파이썬 설치 시 Add Python 3.8 to PATH에 체크</p>
         </div>
         <hr>
@@ -162,8 +162,8 @@
         <textarea id="pip" style="display: none;">pip install Flask Flask-Cors google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2</textarea>
 
         <textarea id="reqtxt" style="display: none;">pip freeze > requirements.txt</textarea>
-
-        <textarea id="pythonexe" style="display: none;"></textarea>
+        <textarea id="vscodeexe" style="display: none;">http://update.code.visualstudio.com/1.73.1/win32-x64-user/stable</textarea>
+        <textarea id="pythonexe" style="display: none;">http://www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe</textarea>
     </div>
     </div>
     </div>
